@@ -13,6 +13,7 @@
 		83F2F35F2917C96900788398 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F2F35D2917C96900788398 /* Main.storyboard */; };
 		83F2F3612917C96900788398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83F2F3602917C96900788398 /* Assets.xcassets */; };
 		83F2F3642917C96900788398 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F2F3622917C96900788398 /* LaunchScreen.storyboard */; };
+		83F2F36F2917C9DD00788398 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F2F36E2917C9DD00788398 /* Film.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		83F2F3602917C96900788398 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83F2F3632917C96900788398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83F2F3652917C96900788398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83F2F36E2917C9DD00788398 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,48 @@
 		83F2F3562917C96900788398 /* Parsing */ = {
 			isa = PBXGroup;
 			children = (
-				83F2F3572917C96900788398 /* AppDelegate.swift */,
-				83F2F3592917C96900788398 /* SceneDelegate.swift */,
-				83F2F35B2917C96900788398 /* ViewController.swift */,
-				83F2F35D2917C96900788398 /* Main.storyboard */,
+				83F2F36B2917C98400788398 /* App */,
+				83F2F3702917C9E200788398 /* Models */,
+				83F2F36D2917C99E00788398 /* ViewControllers */,
+				83F2F36C2917C99500788398 /* Storyboard */,
 				83F2F3602917C96900788398 /* Assets.xcassets */,
-				83F2F3622917C96900788398 /* LaunchScreen.storyboard */,
-				83F2F3652917C96900788398 /* Info.plist */,
 			);
 			path = Parsing;
+			sourceTree = "<group>";
+		};
+		83F2F36B2917C98400788398 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				83F2F3572917C96900788398 /* AppDelegate.swift */,
+				83F2F3592917C96900788398 /* SceneDelegate.swift */,
+				83F2F3652917C96900788398 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		83F2F36C2917C99500788398 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				83F2F35D2917C96900788398 /* Main.storyboard */,
+				83F2F3622917C96900788398 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		83F2F36D2917C99E00788398 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				83F2F35B2917C96900788398 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		83F2F3702917C9E200788398 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				83F2F36E2917C9DD00788398 /* Film.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83F2F35C2917C96900788398 /* ViewController.swift in Sources */,
+				83F2F36F2917C9DD00788398 /* Film.swift in Sources */,
 				83F2F3582917C96900788398 /* AppDelegate.swift in Sources */,
 				83F2F35A2917C96900788398 /* SceneDelegate.swift in Sources */,
 			);
@@ -288,7 +324,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Parsing/Info.plist;
+				INFOPLIST_FILE = Parsing/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -301,9 +337,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.swiftbook.Parsing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +354,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Parsing/Info.plist;
+				INFOPLIST_FILE = Parsing/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -328,9 +367,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.swiftbook.Parsing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
